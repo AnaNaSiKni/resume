@@ -1,0 +1,42 @@
+/* Фон: размытые золотые пятна, которые медленно плывут */
+.liquid-bg {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  background: radial-gradient(120% 80% at 50% 0%, var(--color-bg-glow), var(--color-bg) 70%);
+}
+
+.liquid-bg__blob {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--color-gold), transparent 65%);
+  filter: blur(90px);
+  opacity: 0.28;
+  animation: drift 26s ease-in-out infinite alternate;
+}
+
+.liquid-bg__blob:nth-child(1) {
+  top: -18vmax;
+  right: -14vmax;
+  width: 55vmax;
+  height: 55vmax;
+}
+
+.liquid-bg__blob:nth-child(2) {
+  bottom: -12vmax;
+  left: -12vmax;
+  width: 40vmax;
+  height: 40vmax;
+  opacity: 0.2;
+  animation-delay: -9s;
+}
+
+.liquid-bg__blob:nth-child(3) {
+  top: 45%;
+  left: 40%;
+  width: 28vmax;
+  height: 28vmax;
+  opacity: 0.12;
+  animation-delay: -17s;
+}

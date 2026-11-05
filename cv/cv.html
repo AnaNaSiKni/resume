@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>Никита Гончаров — Junior Frontend-разработчик</title>
+  <style>
+    @page { size: A4; margin: 16mm 17mm; }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      color: #1d1d1b;
+      font: 11pt/1.45 Carlito, Calibri, "Segoe UI", Arial, sans-serif;
+    }
+
+    h1, h2, h3, p, ul { margin: 0; }
+    ul { padding: 0; list-style: none; }
+    a { color: inherit; text-decoration: none; }
+
+    h1 { font-size: 24pt; line-height: 1.1; letter-spacing: -0.01em; }
+    .role { margin-top: 4px; color: #7a5a12; font-size: 13pt; font-weight: 500; }
+
+    .contacts {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2px 18px;
+      margin-top: 10px;
+      font-size: 9.5pt;
+    }
+
+    h2 {
+      margin: 18px 0 8px;
+      padding-bottom: 3px;
+      border-bottom: 1px solid #b89a4a;
+      color: #7a5a12;
+      font-size: 9.5pt;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .skills li { margin-bottom: 2px; }
+    .skills b { display: inline-block; min-width: 120px; font-weight: 600; }
+
+    .item { margin-bottom: 9px; break-inside: avoid; }
+    .item h3 { font-size: 11pt; }
+    .item h3 span { color: #5d5d58; font-size: 9.5pt; font-weight: 400; }
+    .item p { margin-top: 1px; }
+    .item .stack { color: #5d5d58; font-size: 9.5pt; }
+    .item .links { margin-top: 1px; font-size: 9.5pt; }
+
+    .facts li { margin-bottom: 2px; }
+    .facts b { display: inline-block; min-width: 120px; font-weight: 600; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Никита Гончаров</h1>
+    <p class="role">Junior Frontend-разработчик</p>
+    <p class="contacts">
+      <span>Брянск</span>
+      <a href="mailto:NiQii@yandex.ru">NiQii@yandex.ru</a>
+      <a href="tel:+79610013335">+7 961 001-33-35</a>
+      <a href="https://t.me/ananasik_NG">t.me/ananasik_NG</a>
+      <a href="https://github.com/AnaNaSiKni">github.com/AnaNaSiKni</a>
+    </p>
+  </header>
+
+  <section>
+    <h2>О себе</h2>
+    <p>
+      Начинающий frontend-разработчик. Делаю интерфейсы на React и TypeScript:
+      личный кабинет банка с авторизацией, переводами, платежами и аналитикой.
+      Важно, чтобы интерфейс был красивым, удобным, доступным и надёжным.
+      Ищу работу или стажировку в команде сильных разработчиков.
+    </p>
+  </section>
+
+  <section>
+    <h2>Навыки</h2>
+    <ul class="skills">
+      <li><b>Основа</b> HTML5, CSS3, JavaScript, Flex / Grid, адаптивная вёрстка</li>
+      <li><b>Стек</b> React, TypeScript, React Router, TanStack Query, Zustand</li>
+      <li><b>Качество</b> Zod, React Hook Form, Vitest, ARIA</li>
+      <li><b>Инструменты</b> Git, GitHub, Vite, GitHub Actions</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Проекты</h2>
+
+    <div class="item">
+      <h3>Nimbus <span>· личный кабинет банка</span></h3>
+      <p>
+        Интерфейс в стиле «жидкого стекла»: карты, платежи, переводы, цели,
+        кредитный калькулятор, курсы валют и аналитика.
+      </p>
+      <p class="stack">React, TypeScript, Vite, Vitest</p>
+      <p class="links">
+        <a href="https://github.com/AnaNaSiKni/Nimbus">github.com/AnaNaSiKni/Nimbus</a> ·
+        <a href="https://ananasikni.github.io/Nimbus/#/login">ananasikni.github.io/Nimbus</a>
+      </p>
+    </div>
+
+    <div class="item">
+      <h3>Envelo <span>· учёт бюджета методом конвертов</span></h3>
+      <p>
+        Веб-приложение на чистых HTML, CSS и JavaScript (ES-модули), без сборщиков и библиотек.
+        Деньги сначала приходят в «свободные», затем раскладываются по конвертам.
+      </p>
+      <p class="stack">HTML, CSS, JavaScript</p>
+      <p class="links">
+        <a href="https://github.com/AnaNaSiKni/envelo">github.com/AnaNaSiKni/envelo</a> ·
+        <a href="https://ananasikni.github.io/envelo">ananasikni.github.io/envelo</a>
+      </p>
+    </div>
+
+    <div class="item">
+      <h3>Веб-банк <span>· копия интерфейса</span></h3>
+      <p>Интерфейс веб-банка на чистых HTML, CSS и JavaScript без библиотек и фреймворков.</p>
+      <p class="stack">HTML, CSS, JavaScript</p>
+      <p class="links">
+        <a href="https://github.com/AnaNaSiKni/n-bank">github.com/AnaNaSiKni/n-bank</a> ·
+        <a href="https://ananasikni.github.io/n-bank/">ananasikni.github.io/n-bank</a>
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Образование</h2>
+    <div class="item">
+      <h3>Брянский государственный технический университет <span>· 2020 — 2025</span></h3>
+      <p>Факультет информационных технологий, направление «Информатика и вычислительная техника».</p>
+    </div>
+    <div class="item">
+      <h3>Курсы по веб-разработке <span>· самообучение</span></h3>
+      <p>Learn: HTML, CSS, JavaScript, затем React и TypeScript.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Дополнительно</h2>
+    <ul class="facts">
+      <li><b>Русский</b> родной</li>
+      <li><b>Английский</b> техническая литература, со словарём</li>
+      <li><b>Резюме онлайн</b> <a href="https://ananasikni.github.io/resume/">ananasikni.github.io/resume</a></li>
+    </ul>
+  </section>
+</body>
+</html>

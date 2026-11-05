@@ -1,0 +1,41 @@
+/* Анимации */
+
+@keyframes shine {
+  to { background-position: -220% 0; }
+}
+
+@keyframes drift {
+  to { transform: translate(7vmax, 5vmax) scale(1.18); }
+}
+
+/* Появление блоков при прокрутке.
+   Класс .js ставится скриптом, поэтому без JS всё остаётся видимым. */
+.js .reveal {
+  opacity: 0;
+  transform: translateY(26px);
+  transition: opacity 0.9s ease, transform 0.9s ease;
+}
+
+.js .reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Для тех, кто отключил анимации в системе */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .gold-text,
+  .portrait,
+  .liquid-bg__blob {
+    animation: none;
+  }
+
+  .js .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}

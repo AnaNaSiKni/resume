@@ -1,0 +1,119 @@
+/* Все цвета, шрифты и размеры сайта в одном месте.
+   Тема: без data-theme на <html> берётся из системы, light и dark включают вручную.
+   Тёмные цвета записаны два раза (авто и ручной выбор), при правке меняйте оба блока. */
+
+/* ---------- Общие значения (не зависят от темы) ---------- */
+:root {
+  --color-gold: #e3bd55;
+  --color-on-gold: #1c1f14;
+
+  /* Золотой градиент: кнопки, рамка фото, ромбы таймлайна */
+  --gradient-gold: linear-gradient(
+    115deg,
+    #7b5b17 0%, #d9b44a 22%, #fff0b0 38%, #c79a2e 55%, #8f6a1a 75%, #e8c968 100%
+  );
+
+  /* Шрифты */
+  --font-serif: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+  --font-sans: "Jost", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  /* Размеры */
+  --page-width: 1040px;
+  --page-padding: clamp(18px, 5vw, 40px);
+  --nav-height: 64px;
+  --radius-card: 18px;
+  --radius-pill: 999px;
+}
+
+/* ---------- Светлая тема (по умолчанию) ---------- */
+:root {
+  color-scheme: light dark;
+
+  --color-bg: #f5efdd;
+  --color-bg-glow: #fffaea;
+  --color-surface: #fffcf2;
+  --color-surface-light: #efe7cc;
+  --color-khaki: #6e6b3f;
+  --color-sand: #5a5630;
+  --color-text: #2a2815;
+  --color-text-soft: #4d4a30;
+
+  --color-accent: #8a620f;
+  --color-gold-bright: #6b4a08;
+  --color-link-hover: #5a3d04;
+  --color-gold-line: rgba(138, 98, 15, 0.28);
+  --color-gold-border: rgba(138, 98, 15, 0.6);
+
+  --gold-rgb: 168, 124, 31;
+  --khaki-rgb: 110, 107, 63;
+  --nav-bg: rgba(245, 239, 221, 0.78);
+  --shadow-portrait: rgba(70, 55, 10, 0.22);
+  --shadow-card: rgba(70, 55, 10, 0.18);
+
+  /* Для текста: темнее, чтобы читалось на светлом фоне */
+  --gradient-gold-text: linear-gradient(
+    115deg,
+    #6b4a0a 0%, #9c7316 22%, #b0801c 38%, #7d5810 55%, #5c4008 75%, #a67c1f 100%
+  );
+}
+
+/* ---------- Тёмная тема: авто ---------- */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --color-bg: #1c1f14;
+    --color-bg-glow: #2c3120;
+    --color-surface: #262a1b;
+    --color-surface-light: #353a25;
+    --color-khaki: #8d8a5a;
+    --color-sand: #d8cfae;
+    --color-text: #f2ebd8;
+    --color-text-soft: #cfc7ab;
+
+    --color-accent: #e3bd55;
+    --color-gold-bright: #f3d57a;
+    --color-link-hover: #fff0b0;
+    --color-gold-line: rgba(217, 180, 74, 0.25);
+    --color-gold-border: rgba(217, 180, 74, 0.6);
+
+    --gold-rgb: 217, 180, 74;
+    --khaki-rgb: 141, 138, 90;
+    --nav-bg: rgba(28, 31, 20, 0.72);
+    --shadow-portrait: rgba(0, 0, 0, 0.5);
+    --shadow-card: rgba(0, 0, 0, 0.4);
+
+    --gradient-gold-text: var(--gradient-gold);
+  }
+}
+
+/* ---------- Тёмная тема: вручную ---------- */
+:root[data-theme="dark"] {
+  color-scheme: dark;
+
+  --color-bg: #1c1f14;
+  --color-bg-glow: #2c3120;
+  --color-surface: #262a1b;
+  --color-surface-light: #353a25;
+  --color-khaki: #8d8a5a;
+  --color-sand: #d8cfae;
+  --color-text: #f2ebd8;
+  --color-text-soft: #cfc7ab;
+
+  --color-accent: #e3bd55;
+  --color-gold-bright: #f3d57a;
+  --color-link-hover: #fff0b0;
+  --color-gold-line: rgba(217, 180, 74, 0.25);
+  --color-gold-border: rgba(217, 180, 74, 0.6);
+
+  --gold-rgb: 217, 180, 74;
+  --khaki-rgb: 141, 138, 90;
+  --nav-bg: rgba(28, 31, 20, 0.72);
+  --shadow-portrait: rgba(0, 0, 0, 0.5);
+  --shadow-card: rgba(0, 0, 0, 0.4);
+
+  --gradient-gold-text: var(--gradient-gold);
+}
+
+/* ---------- Светлая тема: вручную ---------- */
+:root[data-theme="light"] {
+  color-scheme: light;
+}

@@ -1,0 +1,18 @@
+/* Адаптив для планшетов и телефонов */
+
+@media (max-width: 820px) {
+  .site-nav__list {
+    display: none;
+  }
+
+  .hero__inner,
+  .about {
+    grid-template-columns: 1fr;
+  }
+
+  /* На телефоне фото показываем выше текста */
+  .portrait {
+    order: -1;
+    width: min(230px, 60vw);
+  }
+}
